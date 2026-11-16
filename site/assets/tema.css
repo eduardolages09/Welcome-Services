@@ -1,0 +1,25 @@
+/* Proposta W · Porto — Bona Nova + Host Grotesk.
+   Branco quebrado e a tinta do granito; cada casa com a sua cor, medida nas fotos. Letra: Bona Nova (renascentista, itálico na 2.ª linha dos títulos) + Host Grotesk. */
+:root {
+  --nome: "Bona Nova", Georgia, serif; --serif: "Bona Nova", Georgia, serif; --sans: "Host Grotesk", system-ui, sans-serif;
+  --peso-titulo: 400; --peso-nome: 400;
+  --fundo: #f6f4f0; --fundo-2: #eeebe5; --tinta: #1e2226; --tinta-2: #6c6e6f; --destaque: #3d6577; --destaque-2: #31515f; --destaque-claro: #a8bac2; --escuro: #22323b; --escuro-2: #2d424e; --quartos: #22323b; --claro: #f6f4f0; --bloco: #cdd5d5;
+  --letra: 16px; --letra-tm: calc(16px - .5px);
+}
+.hero__titulo > span + span { font-style: italic; }
+.w-titulo em, .w-fecho h2 em, .w-hero h1 > span + span, .wb-cab h1 em { font-style: italic; }
+.w-hero h1, .w-titulo { letter-spacing: -.01em; }
+
+/* marca da Welcome Services (16/11): a letra e as duas cores do logótipo */
+:root { --marca-letra: "Dosis", system-ui, sans-serif; --marca-1: #55565A; --marca-2: #006080; }
+/* páginas das casas (16/11): os botões de reserva em branco, como no hero da Porto Cathedral, em todas as casas e também com o topo
+   sólido; um filete fino para se lerem sobre o claro. A landing fica com o petróleo da marca. */
+body:not(.w-landing) .w-topo.topo .botao--topo,
+body:not(.w-landing) .w-hero .rb__ir { background: #fff; color: var(--tinta); border: 1px solid color-mix(in srgb, var(--tinta) 16%, transparent); box-shadow: 0 6px 20px -8px rgba(14, 14, 16, .35); }
+body:not(.w-landing) .w-topo.topo .botao--topo:hover,
+body:not(.w-landing) .w-hero .rb__ir:hover { background: #f4f4f2; }
+body:not(.w-landing) .w-hero .rb__ir::after { color: var(--tinta); }
+body:not(.w-landing) .w-topo.solido .topo__wpp,
+body:not(.w-landing).w-hero-claro .w-topo:not(.solido) .topo__wpp { background: #fff; color: var(--tinta); }
+/* barra de baixo do telemóvel nas casas: «Reservar» também em branco, com filete */
+body:not(.w-landing) .barra .barra__principal { background: #fff; color: var(--tinta); border: 1px solid color-mix(in srgb, var(--tinta) 22%, transparent); }
